@@ -1,0 +1,86 @@
+/* =========================================
+TYPOGRAPHY STYLES
+============================================ */
+
+
+
+$Montserrat: 'Montserrat', sans-serif;
+$Roboto: 'Roboto', sans-serif;
+
+
+
+h1{
+  font-size: 80rem;
+	font-family: $Montserrat;
+	color: $darkblack;
+}
+
+h2{
+  font-size: 30rem;
+	font-family: $Montserrat;
+	color: $darkblack;
+
+}
+
+h3{
+  font-size: 28rem;
+	font-family: $Montserrat;
+	font-weight: 700;
+	color: $darkblack;
+}
+
+h4{
+  font-size: 20rem;
+  font-family:
+}
+
+h5{
+  font-size: 16rem;
+  font-family:
+}
+
+h6{
+	font-size: 12rem;
+	font-family: 
+}
+
+p{
+  font-size: 18rem;
+	font-family: $Roboto;
+	color: $paragraph-grey;
+}
+
+/* ------------  SECTION STYLES  ------------ */
+
+/* ------------  HEADER  ------------ */
+
+.main-nav{
+	font-size: 22rem;
+	font-family: $Montserrat;
+	color: $darkblack;
+}
+
+
+.header__hero--background-text{
+	font-size:500px;
+	color:rgba(170, 170, 170, 0.219608);
+
+}
+
+/* ------------  FEATURES  ------------ */
+
+
+
+
+/* ------------  MAIN  ------------ */
+
+
+
+
+/* ------------  FOOTER FEATURES  ------------ */
+
+
+
+
+/* ------------  FOOTER  ------------ */
+

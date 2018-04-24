@@ -1,0 +1,208 @@
+/* =========================================
+MAIN CONTENT SECTION
+============================================ */
+
+.main-wrapper{
+	width: 60%;
+	margin: 0 auto;
+}
+
+/* =========================================
+PRODUCTS
+============================================ */
+
+.main__products{
+	margin-top: 100px;
+}
+
+.products__sub-header{
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 30px;
+}
+
+.products__container{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.products__item{
+  width: 23%;
+}
+
+.products__item--imageContainer{
+  position: relative;
+}
+
+.products__item--img{
+  width: 100%;
+  height: auto;
+}
+
+.products__item__icon{
+	@include centerXY;
+  background: $dark-grey;
+  width: 42px;
+  height: 42px;;
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+}
+
+.products__item__icon--featured{
+  background: $accent;
+}
+
+
+
+// TOP PRODUCTS
+
+.top__products, .onsale__products{
+	position:relative;
+}
+
+.top__products::before,
+.onsale__products::before{
+	position: absolute;
+	color: #eee;
+	font-family: $Montserrat;
+	font-size: 8.6rem;
+
+}
+
+
+.top__products::before{
+	content:"Spring/Summer";
+	transform: rotate(90deg);
+	right: -50%;
+	top: 48%;
+
+}
+
+
+// ONSALE PRODUCTS
+
+.onsale__products::before{
+	content:"Summer Sale";
+	transform: rotate(90deg);
+	left: -35%;
+	top: 35%;
+}
+
+
+
+/* =========================================
+BANNER
+============================================ */
+
+.banner{
+	padding: 100px 0px;
+	position: relative;
+}
+
+.banner__imageContainer{
+  position: relative;
+  width: 68%;
+}
+
+.banner__imageContainer::after{
+	content:"By Mark Jacobs";
+	text-transform: uppercase;
+	color: #444;
+  position:absolute;
+  transform: rotate(-90deg) translate(80px, 730px);
+  font-size: 1.5rem;
+	font-family: $Montserrat;
+	
+}
+
+.banner__imageMain{
+	opacity: 0.8;
+}
+
+.banner-border{
+  position: absolute;
+	top: 20%;
+	left: 35%;
+}
+
+.banner__slider-buttons{
+	position: absolute;
+	left: 30px;
+	top: 50%;
+	display: flex;
+	background: $dark-grey;
+}
+
+.banner__slider-button{
+	padding: 15px;
+}
+
+.banner__slider-left{
+	color: $accent;
+}
+
+.banner__slider-right{
+	color: $light-grey;
+}
+
+.banner__content{
+	position: absolute;
+	right: 30px;
+  top: 200px;
+  text-align: right;
+}
+
+.banner__button{
+  border: 1px solid $accent;
+}
+
+
+/* =========================================
+BLOG
+============================================ */
+
+.blog__container{
+  margin: 0 auto;
+}
+
+.blog__posts__post{
+  display:flex;
+  justify-content: center;
+}
+
+.blog__post--text{
+	padding-top: 100px;
+	width: 40%;
+	position: relative;
+	h6{
+		margin: 10px;
+	}
+	h4{
+		margin: 10px;
+	}
+}
+
+.blog__posts__post1{
+	position:relative;
+	bottom: -63px;
+	z-index: 2;
+}
+
+.blog__post--text1{
+padding-left: 50px;
+left: 30px;
+}
+
+.blog__post--text2{
+  text-align: right;
+	padding-right: 50px;
+	right: 30px;
+}
+
+.blog__post__image-container{
+	width: 60%;
+	position: relative;
+}
+

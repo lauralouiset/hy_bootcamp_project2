@@ -1,8 +1,9 @@
 @import "setup";
-@import "utils";
+@import "variables-mixins";
 @import "typography";
-@import "components/header";
-@import "components/footer";
+@import "utils";
+
+
 
 
 /* =========================================
@@ -40,23 +41,140 @@ img{
 	max-width: 100%;
 }
 
+a, 
+a:visited{
+  text-decoration: none;
+  color: inherit;
+}
+
+ul{
+  list-style-type: none;
+}
+
 .wrapper{
   max-width: 1920px;
+  margin: 0 auto;
 }
 
-
-
-.image-container--with-buttons{
-
+.inner-wrapper{
+  width: 90%;
+  margin: 0 auto;
 }
+
 
 /* =========================================
 HEADER
 ============================================ */
 
+@import "components/header";
 
-/* ------------  HEADER NAV  ------------ */
+/* =========================================
+FEATURES
+============================================ */
 
-/* ------------  HEADER HERO  ------------ */
+
+.features{
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.features__item{
+  position: relative;
+  width: 25%;
+}
+
+.features__caption{
+  position: absolute;
+  bottom: 15%;
+  left: -20%;
+}
+
+.features__caption h3{
+  padding: 10px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.features__item-2 img{
+  outline: 5px solid white;
+  outline-offset: -20px;
+}
+.features__item-1::before,
+.features__item-2::before,
+.features__item-3::before{
+  content:"-- Unique Novelties";
+  position:absolute;
+  transform: rotate(-90deg) translate(-200px, -120px);
+  color: $dark-grey;
+  font-size: 1.6rem;
+  font-family: $Montserrat;
+}
 
 
+
+/* =========================================
+MAIN CONTENT
+============================================ */
+
+@import "components/main";
+
+
+
+
+
+/* =========================================
+CALL TO ACTION
+============================================ */
+
+.cta{
+  display: flex;
+}
+
+.cta__item{
+  width: 50%;
+  padding: 150px 0;
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+
+
+.cta__item--dark{
+  background-image: url("../images/footer-1.png");
+  color: white;
+  & h3, & p{
+    color: white;
+    }
+  }
+
+.cta__button--dark{
+  color: white;
+  border: 1px solid white;
+}
+
+  
+.cta__item--light{
+  background-image: url("../images/footer-2.png");
+    & h3, & p{
+    color: $dark-grey;
+  }
+}
+
+.cta__button--light{
+  color: $dark-grey;
+  border: 1px solid $dark-grey;
+}
+
+
+
+
+/* =========================================
+FOOTER
+============================================ */
+
+@import "components/footer";

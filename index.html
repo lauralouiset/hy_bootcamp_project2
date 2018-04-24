@@ -4,19 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
   <title>LL Project 2 - MaxShop</title>
 </head>
 <body>
-  <div class="wrapper">
-  
+	<div class="wrapper">
+
   <!-- HEADER & NAV -->
 	<header>
-		<nav>
+		<nav class="header-nav inner-wrapper">
       <a href="index.html"><img src="images/logo.png" alt="MaxShop logo"></a>
-      <ul class="header-nav">
-        <li><a href="#index.html">Home</a></li>
+      <ul class="header-nav__nav">
+        <li><a class="targeted" href="#index.html">Home</a></li>
         <li><a href="#">Shop <i class="fas fa-chevron-down"></i></a></li>
         <li><a href="#">Lookbook</a></li>
         <li><a href="#">Contact</a></li>
@@ -24,16 +24,16 @@
       </ul>
 
       <div class="header__options">
-        <ul class="header__options--languages--drop-down">
-          <li> <img src="images/icon-english.png" alt="English flag icon">GB <i class="fas fa-chevron-down"></i>
-            <ul>
+        <ul class="header__options--languages">
+          <li><img src="images/icon-english.png" alt="English flag icon">GB <i class="fas fa-chevron-down"></i>
+            <ul class="header__options--languages--drop-down">
               <li><img src="images/icon-french.png" alt="French flag icon">FR</li>
               <li><img src="images/icon-german.png" alt="German flag icon">GER</li>
               <li><img src="images/icon-usa.png" alt="USA flag icon">USA</li>
             </ul>
           </li>
         </ul>
-        <ul class="header__option--icons">
+        <ul class="header__options--icons">
           <li><img src="images/icon-search.png" alt="search icon"></li>
           <li><img src="images/icon-user.png" alt="Account user icon"></li>
           <li class="header__options--icons--bag"><img src="images/icon-bag-black.png" alt="Shopping bag icon"></a></li>
@@ -45,28 +45,29 @@
     <!-- HERO SECTION -->
 
     <section class="hero">
-      <h2>26/02/2016</h2>
+      <h2 class="hero-date">26/02/2016</h2>
 
       <div class="header__hero--background">
         <span class="header__hero--background-text">01</span>
       </div>
 
       <div class="header__hero__heading">
-        <h2>Bring glamour to your wardrobe</h2>
-        <h1>Summer Collection 2016”</h1>
+        <h3>Bring glamour to your wardrobe</h3>
+        <h1>Summer <br/> Collection 2016”</h1>
         <a href="#" class="button button--header">View more</a>
       </div>
 
-      <div class="header__hero__image-container header__hero__image-container__with-buttons image-container__with-buttons">
+      <div class="header__hero__image-container image-container__buttons image-container__buttons--light">
         <img src="images/main-image-1.png" alt="Dresses hanging in closet">
 
-        <div class="image-container__main__arrows">
-          <div class="image-container__main__arrows--right">
+        <div class="slider-arrows--light">
+					<div class="light--arrow light--arrow--left">
+						<i class="fas fa-chevron-left"></i>
+					</div>
+          <div class=" light--arrow light--arrow--right">
             <i class="fas fa-chevron-right"></i>
           </div>
-          <div class="image-container__main__arrows-left">
-            <i class="fas fa-chevron-left"></i>
-          </div>
+
         </div>
 
       </div>
@@ -79,84 +80,430 @@
 
 	</header>
 
-<!-- GALLERY -->
-  <section class="gallery">
+<!-- FEATURES -->
+  <section class="features inner-wrapper">
 
-    <figure>
+    <div class="features__item features__item-1">
       <img src="images/image-1.png" alt="Woman in white jacket">
-      <figcaption>
-        <h3>Fashion</h3>
+      <div class="features__caption">
+        <h3>Fashion</h3> <br/>
         <h3>&amp; Accessories</h3>
-      </figcaption>
-    </figure>
+			</div>
+		</div>
 
-    <figure>
+    <div class="features__item features__item-2">
       <img src="images/image-2.png" alt="Woman in tulle skirt and backpack">
-      <figcaption>
-        <h3>New</h3>
+      <div class="features__caption">
+        <h3>New</h3> <br/>
         <h3>Collections</h3>
-      </figcaption>
-    </figure>
+			</div>
+    </div>
 
-    <figure>
+    <div class="features__item features__item-3">
       <img src="images/image-3.png" alt="Man in sweater and dress shirt">
-      <figcaption>
-        <h3>Spring/Summer</h3>
+      <div class="features__caption">
+        <h3>Spring/Summer</h3> <br/>
         <h3>Lookbook</h3>
-      </figcaption>
+			</div>
     </figure>
+	</div>
+	
+	</section>
+
+<!-- MAIN  CONTENT-->
+<main class="main-wrapper">
+
+	<!-- TOP PRODUCTS -->
+  <section class="main_section main__products top__products">
+
+		<div class="main__header">
+			<h2>Top Products</h2>
+					<div class="products__sub-header">
+					<p class="products__header__desc">Come &amp; Check our new spring summer collection 2016.</p>
+
+							<div class="products--btns">
+								<p><a href="#">Prev</a>
+									<span class="main__products--btns--next">/</span>
+									<span class="main__products--btns--next"><a href="#">Next</a></span>
+							</p>
+							</div>
+					</div>
+		</div> <!-- header ends -->
+		
+
+			<!-- top products items -->
+		<div class="products__container products__container-top">
+
+			<!-- item 1 -->
+			<div class="products__item products--item1">
+				<!-- top products info image -->
+				<div class="products__item--imageContainer">
+					<img class="products__item--img" src="images/top-product-1.png" alt="Woman in white sweater">
+					<div class="products__item__icon"><img src="images/icon-bag-white.png" alt="shopping bag icon">
+					</div>
+				</div>
+					<!-- top products info caption -->
+				<div class="products__item__info">
+					<h5 class="products__item__info--name">Lipsy Crochet Applique Wrap</h5>
+					<h5 class="products__item__info--category">Blouse</h5>
+					<p class="products__item__info--price">$120.00<span class="products__item__info--fullprice">$150.00</span></p>
+				</div>
+
+				</div>
+				<!-- item end -->
+
+		
+				<!-- item 2 -->
+				<div class="products__item products--item2">
+					<!-- top products info image -->
+					<div class="products__item--imageContainer">
+						<img class="products__item--img" src="images/top-product-2.png" alt="Woman in white sweater">
+						<div class="products__item__icon products__item__icon--featured">
+							<img src="images/icon-bag-white.png" alt="shopping bag icon">
+						</div>
+					</div>
+						<!-- top products info caption -->
+						<div class="products__item__info">
+							<h5 class="products__item__info--name">Sweatshirt in Grey Marl</h5>
+							<h5 class="products__item__info--category">T-Shirt</h5>
+							<p>
+								<span class="products__item__info--price">$110.00</span>
+							</p>
+						</div>
+				</div>
+				<!-- item end -->
+
+				<!-- item 3 -->
+				<div class="products__item products--item3">
+					<!-- top products info image -->
+					<div class="products__item--imageContainer">
+						<img class="products__item--img" src="images/top-product-3.png" alt="Man in fancy cowboy hat">
+						<div class="products__item__icon">
+							<img src="images/icon-bag-white.png" alt="shopping bag icon">
+						</div>
+					</div>
+						<!-- top products info caption -->
+						<div class="products__item__info">
+							<h5 class="products__item__info--name">Embroidered Flippy</h5>
+							<h5 class="products__item__info--category">Dress</h5>
+							<p>
+								<span class="products__item__info--price">$145.00</span>
+							</p>
+						</div>
+				</div>
+				<!-- item end -->
+
+					<!-- item 4 -->
+					<div class="products__item products--item4">
+						<!-- top products info image -->
+						<div class="products__item--imageContainer">
+							<img class="products__item--img" src="images/top-product-4.png" alt="Man in ball cap"> 
+							<div class="products__item__icon">
+								<img src="images/icon-bag-white.png" alt="shopping bag icon">
+							</div>
+						</div>
+
+							<!-- top products info caption -->
+							<div class="products__item__info">
+								<h5 class="products__item__info--name">Embroidered Skater</h5>
+								<h5 class="products__item__info--category">Dress</h5>
+								<p  class="products__item__info--price">$120.00</p>
+							</div>
+					</div>
+						<!-- item end -->
+
+		</div> <!-- products-top-items end -->
+			
+	</section>
+	
+
+	<!-- BANNER -->
+  <section class="main_section banner wrapper">
+
+		<div class="banner__imageContainer">
+			<img class="banner__imageMain" src="images/main-image-2.png" alt="T-shirts hanging on rack">
+			<img class="banner-border" src="images/banner-border.png" alt="banner border">
+
+			<!-- slider buttons -->
+			<div class="banner__slider-buttons slider-buttons">
+				<div class="banner__slider-button slider-left">
+					<i class="fas fa-chevron-left"></i>
+				</div>
+				<div class="banner__slider-button slider-right">
+					<i class="fas fa-chevron-right"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="banner__content">
+			<h2>Salvatore Ferragamo Lookbook</h2>
+			<h2>Spring/Summer 2016</h2>
+			<p>18 June 2016 / Salvatore Campaign</p>
+			<a href="#" class="button banner__button">Get the Look!</a>
+		</div>
+
   </section>
 
-<!-- MAIN -->
-<main class="main__wrapper">
-  <section class="main__top-products">
-      <h2>Top Products</h2>
-      <p>Come &amp; Check our new spring summer collection 2016.</p>
-      <div class="main__products__navigation">
-        <span class="main__products__navigation--dark">Prev</span><span class="main__products__navigation--light">/</span><span class="main__products__navigation--light"> Next</span>
-      </div>
-  </section>
+	<!-- ONSALE PRODUCTS -->
+	<section class="main_section main__products onsale__products">
+	
+		<div class="main__header">
+			<h2>Onsale Products</h2>
+			<div class="products__sub-header">
+				<p class="products__header__desc">Come &amp; Check our new spring summer collection 2016.</p>
+	
+				<div class="products--btns">
+					<p>
+						<a href="#">Prev</a>
+						<span class="main__products--btns--next">/</span>
+						<span class="main__products--btns--next">
+							<a href="#">Next</a>
+						</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- header ends -->
+	
+	
+		<!-- top products items -->
+		<div class="products__container products__container-top">
+	
+			<!-- item 1 -->
+			<div class="products__item products--item1">
+				<!-- top products info image -->
+				<div class="products__item--imageContainer">
+					<img class="products__item--img" src="images/onsale-products-1.png" alt="Crosslegged gentleman">
+					<div class="products__item__icon products__item__icon--featured">
+						<img src="images/icon-bag-white.png" alt="shopping bag icon">
+					</div>
+				</div>
+				<!-- top products info caption -->
+				<div class="products__item__info">
+					<h5 class="products__item__info--name">Lipsy Crochet Applique Wrap</h5>
+					<h5 class="products__item__info--category">Blouse</h5>
+					<p class="products__item__info--price">$120.00
+						<span class="products__item__info--fullprice">$150.00</span>
+					</p>
+				</div>
+	
+			</div>
+			<!-- item end -->
+	
+	
+			<!-- item 2 -->
+			<div class="products__item products--item2">
+				<!-- top products info image -->
+				<div class="products__item--imageContainer">
+					<img class="products__item--img" src="images/onsale-products-2.png" alt="Sassy girl in ball cap">
+					<div class="products__item__icon ">
+						<img src="images/icon-bag-white.png" alt="shopping bag icon">
+					</div>
+				</div>
+				<!-- top products info caption -->
+				<div class="products__item__info">
+					<h5 class="products__item__info--name">Sweatshirt in Grey Marl</h5>
+					<h5 class="products__item__info--category">T-Shirt</h5>
+					<p class="products__item__info--price">$88.00
+						<span class="products__item__info--fullprice">$120.00</span>
+					</p>
+				</div>
+			</div>
+			<!-- item end -->
+	
+			<!-- item 3 -->
+			<div class="products__item products--item3">
+				<!-- top products info image -->
+				<div class="products__item--imageContainer">
+					<img class="products__item--img" src="images/onsale-products-3.png" alt="Woman in bikini lounging poolside">
+					<div class="products__item__icon">
+						<img src="images/icon-bag-white.png" alt="shopping bag icon">
+					</div>
+				</div>
+				<!-- top products info caption -->
+				<div class="products__item__info">
+					<h5 class="products__item__info--name">Oysho Crop &amp; Vest Set</h5>
+					<h5 class="products__item__info--category">Dress</h5>
+					<p class="products__item__info--price">$112.00
+						<span class="products__item__info--fullprice">$140.00</span>
+					</p>
+				</div>
+			</div>
+			<!-- item end -->
+	
+			<!-- item 4 -->
+			<div class="products__item products--item4">
+				<!-- top products info image -->
+				<div class="products__item--imageContainer">
+					<img class="products__item--img" src="images/onsale-products-4.png" alt="Closeup of ugly scarf">
+					<div class="products__item__icon">
+						<img src="images/icon-bag-white.png" alt="shopping bag icon">
+					</div>
+				</div>
+	
+				<!-- top products info caption -->
+				<div class="products__item__info">
+					<h5 class="products__item__info--name">Embroidered Skater</h5>
+					<h5 class="products__item__info--category">Dress</h5>
+					<p class="products__item__info--price">$80.00
+						<span class="products__item__info--fullprice">$100.00</span>
+					</p>
+				</div>
+			</div>
+			<!-- item end -->
+	
+		</div>
+		<!-- products-top-items end -->
+	
+	</section>
 
-  <section class="main__banner">
+	<!-- OUR BLOG -->
+  <section class="main_section blog">
+		<h2 class="main__header">Our Blog</h2>
+		<div class="blog__container">
 
-  </section>
+			<div class="blog__posts__post blog__posts__post1">
 
-  <section class="main_onsale-products">
-    <h2>Onsale Products</h2>
-      <p>Come &amp; Check our new spring summer collection 2016.</p>
-      <div class="main__products__navigation">
-        <span class="main__products__navigation--dark">Prev</span>
-        <span class="main__products__navigation--light">/</span>
-        <span class="main__products__navigation--light"> Next</span>
-      </div>
+				<div class="blog__post--text blog__post--text1">
+						<h6 class="blog__post--category">Lookbook</h6>
+						<h4>Excerpt: A Sense of Belonging</h4>
+						<h6 class="blog__post--info">4 October 2016 / 368 Comments</h6>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas saepe laborum officiis vero adipisci.</p>
+					</div>
+					<div class="blog__post__image-container">
+						<img src="images/blog-1.png" alt="Skeleton hand peace-sign t-shirt">
+					</div>
+			</div>
 
-  </section>
+			<div class="blog__posts__post blog__posts__post2">
+				<div class="blog__post__image-container">
+					<img src="images/blog-2.png" alt="Woman in alley with hat">
+					<div class="slider-arrows--light">
+						<div class=" light--arrow light--arrow--left">
+							<i class="fas fa-chevron-left"></i>
+						</div>
+						<div class=" light--arrow light--arrow--right">
+							<i class="fas fa-chevron-right"></i>
+						</div>
 
-  <section class="main__our-blog">
+					</div>
+				</div>
 
+				<div class="blog__post--text blog__post--text2">
+					<h6 class="blog__post--category">Campaign</h6>
+					<h4>Chester &amp; Peck 2016</h4>
+					<h6 class="blog__post--info">4 October 2016 / 368 Comments</h6>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas saepe laborum officiis vero adipisci rerum hic.</p>
+				</div>
+			</div>
+
+		</div>
   </section>
 
 </main>
 
 
-<!-- FEATURES -->
+<!-- CTA -->
 
-<section class="features">
-  <section class="features  features__feature1 feature--dark">
+<section class="cta">
+  <section class="cta__item  cta__item1 cta__item--dark">
     <h3>Rethink Your Design</h3>
     <p>Minimal &amp; Modern Look</p>
-    <a href="#" class="button features__button features__button-dark">Discover More</a>
+    <a href="#" class="button cta__button cta__button--dark">Discover More</a>
   </section>
 
-    <section class="features features__feature2 feature--light">
+    <section class="cta__item cta__item2 cta__item--light">
       <h3>We Are Fashion Shop</h3>
       <p>Revolutionary Concepts</p>
-      <a href="#" class="button features__button features__button--light">Shop Now</a>
+      <a href="#" class="button cta__button cta__button--light">Shop Now</a>
     
-    </section>
+		</section>
+		
 </section>
 
-<!-- FOOTER -->
+	<!-- FOOTER -->
+
+	<footer>
+		<div class="footer__main">
+
+			<div class="footer__content main-wrapper">
+
+				<div class="footer__content__item footer__content__contact">
+					<h5 class="footer__header">Contact</h5>
+					<p class="footer__content__text">621 Bingamon Branch Road Warwich<br/>NY 10990</p>
+					<p class="footer__content__text">Phone: 845-988-7165<br/>Fax:814-468-0188<br/>Email: Support@maxshop.com</p>
+				</div>
+
+				<div class="footer__content__item footer__content__tags">
+					<h5 class="footer__header">Tags</h5>
+					<div class="footer__tags--container">
+						<a href="#" class="footer__tag">creative</a>
+						<a href="#" class="footer__tag">blog</a>
+						<a href="#" class="footer__tag">Maxshopthemes</a>
+						<a href="#" class="footer__tag">themeforest</a>
+						<a href="#" class="footer__tag">logo</a>
+						<a href="#" class="footer__tag">template</a>
+						<a href="#" class="footer__tag">psd</a>
+						<a href="#" class="footer__tag">wordpress</a>
+					</div>
+
+				</div>
+
+				<div class="footer__content__item footer__content__instagram">
+					<h5 class="footer__header">Instagram</h5>
+					<div class="footer__content__instagram__container">
+						<img src="images/insta-1.png" alt="Instagram post 1">
+						<img src="images/insta-2.png" alt="Instagram post 2">
+						<img src="images/insta-3.png" alt="Instagram post 3">
+						<img src="images/insta-4.png" alt="Instagram post 4">
+						<img src="images/insta-5.png" alt="Instagram post 5">
+						<img src="images/insta-6.png" alt="Instagram post 6">
+					</div>
+
+				</div>
+
+				<div class="footer__content__item footer__content__newsletter">
+					<h5 class="footer__header">Newsletter</h5>
+					<form action="signup.php">
+						<label for="email"><p>Signup for our Newsletter &amp; Events</p></label>
+						<input type="email" name="email" id="email" placeholder="Email address">
+						<input type="submit" value="Signup">
+					</form>
+				
+				
+				</div>
+
+			</div>
+
+			<div class="footer__social-media">
+					<h5 class="footer__header">Follow Us On</h5>
+					<ul class="footer__social-media--links">
+						<li><a href="#">Behance</a></li>
+						<li><a href="#">Dribble</a></li>
+						<li><a href="#">Themeforest</a></li>
+						<li><a href="#">Pinterest</a></li>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+					</ul>
+			</div>
+
+			<div class="footer__lower">
+
+				<div class="footer__disclaimer main-wrapper">
+					<p>&copy; Maxshop 2016. All Rights Reserved</p>
+					<ul class="footer__disclaimer__links">
+						<li><a href="#">Terms of Use</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+				</div>
+
+			</div>
+
+
+		</div>
+	</footer>
+
 
 </div>
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>

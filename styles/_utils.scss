@@ -7,12 +7,25 @@ UTILITIES
 /* ------------  BUTTONS  ------------ */
 
 .button{
+  font-size: 1.6rem;
+  font-family: $Montserrat;
+  padding: 15px;
+  border-radius: 30px;
+  min-width: 182px;
+  display: inline-block;
+  text-align: center;
 }
 
 .button--header{
+  background-color: $accent;
+  border: 1px solid $accent;
+  color: white;
 
 }
 
 .button-footer-features{
 
 }
+
+/* ------------  SLIDER BUTRONS  ------------ */
+

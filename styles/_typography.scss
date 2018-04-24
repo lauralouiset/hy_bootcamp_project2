@@ -1,83 +1,136 @@
 /* =========================================
 TYPOGRAPHY STYLES
 ============================================ */
-
-
-
 $Montserrat: 'Montserrat', sans-serif;
 $Roboto: 'Roboto', sans-serif;
 
-
+h1, h2, h3, h4, h5, h6{
+	font-family: $Montserrat;
+	color: $dark-grey;
+}
 
 h1{
-  font-size: 80rem;
-	font-family: $Montserrat;
-	color: $darkblack;
+  font-size: 8.0rem;
 }
 
 h2{
-  font-size: 30rem;
-	font-family: $Montserrat;
-	color: $darkblack;
-
+  font-size: 3.0rem;
 }
 
 h3{
-  font-size: 28rem;
-	font-family: $Montserrat;
-	font-weight: 700;
-	color: $darkblack;
+  font-size: 2.8rem;
 }
 
 h4{
-  font-size: 20rem;
-  font-family:
+  font-size: 2.0rem;
 }
 
 h5{
-  font-size: 16rem;
-  font-family:
-}
-
-h6{
-	font-size: 12rem;
-	font-family: 
+  font-size: 1.6rem;
 }
 
 p{
-  font-size: 18rem;
+  font-size: 1.8rem;
 	font-family: $Roboto;
-	color: $paragraph-grey;
+	color: $light-grey;
+	line-height: 1.7;
 }
 
 /* ------------  SECTION STYLES  ------------ */
 
+
+
 /* ------------  HEADER  ------------ */
 
-.main-nav{
-	font-size: 22rem;
+.header-nav ul li{
+	font-size: 2.2rem;
 	font-family: $Montserrat;
-	color: $darkblack;
+	color: $dark-grey;
+	padding: 0 10px;
 }
 
 
 .header__hero--background-text{
-	font-size:500px;
-	color:rgba(170, 170, 170, 0.219608);
-
+	font-family: $Montserrat;
+	font-size:50rem;
+	font-weight: 500;
+	color:rgba(170, 170, 170, 0.3s);
 }
 
 /* ------------  FEATURES  ------------ */
 
-
+.features__caption h3{
+		font-weight: 700;
+		background: white;
+}
 
 
 /* ------------  MAIN  ------------ */
 
 
+// PRODUCTS
 
 
-/* ------------  FOOTER FEATURES  ------------ */
+.products__header__desc{
+	color: $med-grey;
+
+}
+
+.products--btns{
+	font-family: $Roboto;
+	font-size: 1.6rem;
+	color: $dark-grey;
+		& > {
+		margin: 0 5px;
+	}
+}
+.products--btns--next{
+	color: $light-grey;
+}
+
+.products__item__info{
+		&--name{
+			color: #555;
+			font-size: 1.6rem;
+			line-height: 1.5;
+			font-family: $Roboto;
+			margin: 15px 0 10px;
+			}
+		&--category{
+			color: $light-grey;
+			font-weight: 300;
+			margin: 0 0 15px;
+			}
+
+		&--price{
+			color: $dark-grey;
+			font-size: 1.8rem;
+			font-family: $Montserrat;
+			}
+		&--fullprice{
+			text-decoration: line-through;
+			margin-left: 20px;
+			display: inline-block;
+			color: $light-grey;
+		}
+
+}
+
+
+
+// BLOG
+
+.blog__post--category{
+	text-transform: uppercase;
+	font-size: 1.2rem;
+}
+
+.blog__post--info{
+	font-size: 1.4rem;
+}
+
+
+/* ------------  CTA ------------ */
 
 
 

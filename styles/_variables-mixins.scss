@@ -1,15 +1,43 @@
 /* ------------  VARIABLES & MIXINS  ------------ */
 
 
+/* ------------  COLORS  ------------ */
 
 
-// COLORS
 
-//accent yellow
 $accent: #d4bd52;   
-$accent-dark: #b5a24d;
 
-$darkgrey: #383838;
-$darkblack:#333333
+$dark-grey:#333;
+$med-grey:#888;
+$light-grey: #aaa;
 
-$paragraph-grey: #aaaaaa
+
+@mixin centerXY(){
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* =========================================
+RESPONSIVE BREAKPOINTS
+============================================ */
+
+
+
+  @mixin breakpoint($point) {
+
+    @if $point == laptop {
+      @media (min-width: 1200px) { @content ; }
+  }
+    @else if $point == tablet {
+      @media (min-width: 900px) { @content ; }
+  }
+    @else if $point == phone {
+      @media (min-width: 650px)  { @content ; }
+  }
+  @else if $point == lilmobile {
+      @media (max-width: 500px)  { @content ; }
+
+  }
+}

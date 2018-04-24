@@ -2,3 +2,126 @@
 FOOTER
 ============================================ */
 
+.footer__main{
+  background: $dark-grey;
+}
+
+.footer__lower{
+  background: #444;
+}
+
+.footer__content{
+	display: flex;
+}
+
+.footer__content__item{
+	width: calc(25% - (40px / 3));
+	margin: 10px;
+}
+
+// typography
+
+.footer__header{
+	text-transform: uppercase;
+	color: $accent;
+	text-align: left;
+	margin: 50px 15px;
+}
+
+.footer__content p,
+.footer__content,
+.footer__social-media,
+.footer__disclaimer__links{
+	color: white;
+	font-size: 1.6rem;
+	line-height: 2;
+	font-family: $Montserrat;
+}
+
+
+
+
+
+/* ------------  CONTACT  ------------ */
+
+.footer__content__text{
+	margin-bottom: 30px;
+
+}
+
+/* ------------  TAGS  ------------ */
+
+.footer__tag{
+  border: 1px solid $med-grey;
+	padding: 5px;
+	display: inline-block;
+	margin: 5px;
+	font-size: 1.4rem;
+}
+
+.footer__tag:hover{
+  border: 1px solid $accent;
+}
+
+/* ------------  INSTAGRAM  ------------ */
+
+.footer__content__instagram__container{
+	display: flex;
+	flex-flow: row wrap;
+	img{
+		width: calc(33.33% - 20px);
+		margin: 10px;
+	}
+}
+
+
+
+/* ------------  NEWSLETTER  ------------ */
+
+form input{
+	background: $dark-grey;
+	color: white;
+	border: 1px solid $light-grey;
+	font-size: 16px;
+	font-family: $Montserrat;
+	display: inline-block;
+}
+
+form input[type="email"]{
+	width: 66.66%;
+}
+
+
+/* ------------  SOCIALS  ------------ */
+
+.footer__social-media{
+	display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__social-media--links{
+		display: flex;
+		a{
+		padding: 20px;
+		margin: 10px;
+		}
+		a:hover{
+			border-radius: 30px;
+			border: 1px solid $accent;
+			color: $accent;
+		}
+  }
+
+/* ------------  DISCLAIMER  ------------ */
+
+.footer__disclaimer{
+  padding: 30px;
+  display: flex;
+  justify-content:space-around;
+    &__links{
+    margin-left: 50px;
+    display:flex;
+  }
+}

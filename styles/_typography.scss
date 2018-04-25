@@ -49,13 +49,15 @@ p{
 	font-size: 2.2rem;
 	font-family: $Montserrat;
 	color: $dark-grey;
-	padding: 0 10px;
+	// padding: 0 10px;
 	@include mq(xl){
 		font-size: 1.6rem;
-		padding: 0 5px;
+		padding-bottom: 10px;
+		margin: 0 10px;
 	}
 	@include mq(lg){
 		font-size: 1.4rem;
+		margin: px 15px;
 	}
 }
 

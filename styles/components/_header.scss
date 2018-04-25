@@ -12,7 +12,7 @@ HEADER
   &__nav{
     display:flex;
     li a{
-      padding: 0 10px;
+      // padding: 10 10px;
     }
   }
   .fa-chevron-down{
@@ -34,17 +34,14 @@ HEADER
 
 .header-logo{
   width: 20vw;
-  max-width: 50px;
+  max-width: 200px;
   height: auto;
-  border: 1px solid hotpink;
 } 
 
-.active__page{
+.active__page,
+.header-nav__nav a:hover
+{
   border-bottom: 2px solid $accent;
-}
-
-.header-nav__nav a:hover{
-  color: $accent;
 }
 
 .header__options{
@@ -55,6 +52,8 @@ HEADER
     img{
       margin-right: 10px;
       margin-top: 4px;
+      height: auto;
+      min-width: 20px;
     }
   }
   @include mq(lg){

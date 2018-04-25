@@ -139,6 +139,7 @@ VARIABLES & MIXINS
 ============================================ */
 /* ------------  COLORS  ------------ */
 /* ------------  RESPONSIVE MIXINS  ------------ */
+/* ------------  So here I made variables for the various widths of my most common breakpoints. I then created mixins that would be triggered by keywords ('sm', 'med') passed as arguments in the SCSS files, which would be triggered by if/else conditions to spit out different blocks of code with the variables inserted inside. thanks to Tom Haxell for suggesting I dive deep into SCSS during the month between part-time and boot-camp! ------------ */
 /* =========================================
 TYPOGRAPHY STYLES
 ============================================ */
@@ -175,15 +176,16 @@ p {
 .header-nav ul li {
   font-size: 2.2rem;
   font-family: "Montserrat", sans-serif;
-  color: #333;
-  padding: 0 10px; }
+  color: #333; }
   @media (max-width: 1200px) {
     .header-nav ul li {
       font-size: 1.6rem;
-      padding: 0 5px; } }
+      padding-bottom: 10px;
+      margin: 0 10px; } }
   @media (max-width: 960px) {
     .header-nav ul li {
-      font-size: 1.4rem; } }
+      font-size: 1.4rem;
+      margin: px 15px; } }
 
 #hero__sub-text {
   font-family: "Roboto", sans-serif;
@@ -219,12 +221,9 @@ p {
 
 .header__hero--background-text {
   font-family: "Montserrat", sans-serif;
-  font-size: 40rem;
+  font-size: 25vw;
   font-weight: 500;
   color: rgba(170, 170, 170, 0.3); }
-  @media (max-width: 1200px) {
-    .header__hero--background-text {
-      font-size: 30rem; } }
   @media (max-width: 800px) {
     .header__hero--background-text {
       display: none; } }
@@ -309,14 +308,33 @@ UTILITIES
   border-radius: 30px;
   min-width: 182px;
   display: inline-block;
-  text-align: center; }
+  text-align: center;
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in; }
+
+.button:hover {
+  -webkit-box-shadow: 2px 2px 4px rgba(68, 68, 68, 0.5);
+  box-shadow: 2px 2px 4px rgba(68, 68, 68, 0.5); }
 
 .button--header {
   background-color: #d4bd52;
   border: 1px solid #d4bd52;
   color: white; }
 
-/* ------------  SLIDER BUTRONS  ------------ */
+.cta__button,
+.banner__button {
+  -webkit-transition: background .3s ease-in;
+  -o-transition: background .3s ease-in;
+  transition: background .3s ease-in; }
+
+.cta__button:hover,
+.banner__button:hover {
+  background: #d4bd52;
+  color: #333;
+  border: 1px solid #d4bd52; }
+
+/* ------------  SLIDER BUTTONS  ------------ */
 /* =========================================
 BASE STYLES
 ============================================ */
@@ -388,8 +406,6 @@ HEADER
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    .header-nav__nav li a {
-      padding: 0 10px; }
   .header-nav .fa-chevron-down {
     font-size: 1.2rem; }
 
@@ -401,23 +417,19 @@ HEADER
     flex-direction: column;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between; }
+    justify-content: space-between;
+    padding: 5px; }
   .header__options--languages {
     display: none; } }
 
-@media (max-width: 500px) {
-  .header-nav__nav {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; } }
+.header-logo {
+  width: 20vw;
+  max-width: 200px;
+  height: auto; }
 
-.active-page {
+.active__page,
+.header-nav__nav a:hover {
   border-bottom: 2px solid #d4bd52; }
-
-@media (max-width: 1200px) {
-  .header-logo {
-    height: 35px; } }
 
 .header__options {
   display: -webkit-box;
@@ -442,7 +454,9 @@ HEADER
     align-items: center; }
     .header__options--languages li img {
       margin-right: 10px;
-      margin-top: 4px; }
+      margin-top: 4px;
+      height: auto;
+      min-width: 20px; }
   @media (max-width: 960px) {
     .header__options {
       -webkit-box-orient: vertical;
@@ -453,7 +467,7 @@ HEADER
 .header__options--languages--drop-down {
   display: none; }
 
-.header__options--languages--drop-down li:hover {
+.header__options--languages li:hover .header__option--languages {
   display: block; }
 
 .header__options--icons {
@@ -1069,8 +1083,11 @@ form input {
   border: 1px solid #aaa;
   font-size: 1.4rem;
   padding: 5px;
+  margin-bottom: 15px;
   font-family: "Montserrat", sans-serif;
   display: inline-block; }
+  form input:focus {
+    outline: 1px solid #d4bd52; }
   @media (max-width: 800px) {
     form input {
       text-align: center;
@@ -1078,11 +1095,8 @@ form input {
 
 form input[type="email"] {
   width: 66.66%; }
-  form input[type="email"]:focus {
-    outline: 1px solid #d4bd52; }
   @media (max-width: 800px) {
     form input[type="email"] {
-      margin-bottom: 20px;
       width: 100%; } }
 
 @media (max-width: 800px) {
@@ -1124,7 +1138,10 @@ form input[type="email"] {
     margin: 0 20px;
     display: inline-block;
     border-radius: 30px;
-    border: 1px solid transparent; }
+    border: 1px solid transparent;
+    -webkit-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in; }
   .footer__social-media--links a:hover {
     border-radius: 30px;
     border: 1px solid #d4bd52;
@@ -1155,6 +1172,8 @@ form input[type="email"] {
     text-align: center; }
     .footer__disclaimer__links a {
       margin: 0 20px; }
+    .footer__disclaimer__links a:hover {
+      color: #d4bd52; }
   @media (max-width: 800px) {
     .footer__disclaimer {
       -webkit-box-orient: vertical;

@@ -103,8 +103,12 @@ form input{
 	border: 1px solid $light-grey;
 	font-size: 1.4rem;
 	padding: 5px;
+	margin-bottom: 15px;
 	font-family: $Montserrat;
 	display: inline-block;
+		&:focus{
+		outline: 1px solid $accent;
+	}
 	@include mq(med){
 		text-align: center;
 		padding: 10px;
@@ -113,12 +117,7 @@ form input{
 
 form input[type="email"]{
 	width: 66.66%;
-	&:focus{
-		outline: 1px solid $accent;
-	}
-
 	@include mq(med){
-		margin-bottom: 20px;
 		width: 100%
 	}
 }
@@ -150,6 +149,7 @@ form input[type="email"]{
 		display: inline-block;
 		border-radius: 30px;
 		border: 1px solid transparent;
+		transition: all .3s ease-in;
 		}
 		a:hover{
 			border-radius: 30px;
@@ -176,6 +176,9 @@ form input[type="email"]{
 		text-align:center;
 		& a{
 			margin: 0 20px;
+		}
+		& a:hover{
+			color: $accent;
 		}
 	}
 

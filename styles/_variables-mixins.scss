@@ -5,8 +5,6 @@ VARIABLES & MIXINS
 
 /* ------------  COLORS  ------------ */
 
-
-
 $accent: #d4bd52;   
 
 $dark-grey:#333;
@@ -22,6 +20,7 @@ $light-grey: #aaa;
 
 /* ------------  RESPONSIVE MIXINS  ------------ */
 
+/* ------------  So here I made variables for the various widths of my most common breakpoints. I then created mixins that would be triggered by keywords ('sm', 'med') passed as arguments in the SCSS files, which would be triggered by if/else conditions to spit out different blocks of code with the variables inserted inside. thanks to Tom Haxell for suggesting I dive deep into SCSS during the month between part-time and boot-camp! ------------ */
 
 // Breakpoints 
 

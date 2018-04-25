@@ -97,13 +97,9 @@ p{
 
 .header__hero--background-text{
 	font-family: $Montserrat;
-	font-size: 40rem;
+	font-size: 25vw;
 	font-weight: 500;
 	color:rgba(170, 170, 170, 0.3s);
-
-	@include mq(xl){
-		font-size: 30rem;
-	}
 
 	@include mq(med){
 		display:none;

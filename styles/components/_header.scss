@@ -31,7 +31,7 @@ HEADER
 
 }
 
-@media max-width(){
+@media (max-width:500px){
   .header-nav__nav{
     flex-direction: column;
   }

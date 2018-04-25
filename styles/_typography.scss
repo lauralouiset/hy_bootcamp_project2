@@ -14,7 +14,10 @@ h1{
 }
 
 h2{
-  font-size: 3.0rem;
+	font-size: 3.0rem;
+	@include mq(med){
+		margin-bottom: 15px;
+	}
 }
 
 h3{
@@ -30,7 +33,7 @@ h5{
 }
 
 p{
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 	font-family: $Roboto;
 	color: $light-grey;
 	line-height: 1.7;
@@ -47,22 +50,69 @@ p{
 	font-family: $Montserrat;
 	color: $dark-grey;
 	padding: 0 10px;
+	@include mq(xl){
+		font-size: 1.6rem;
+		padding: 0 5px;
+	}
+	@include mq(lg){
+		font-size: 1.4rem;
+	}
+}
+
+
+#hero__sub-text{
+    font-family: $Roboto;
+    color: $light-grey;
+		font-weight: 300;
+		@include mq(xl){
+			color: $dark-grey;
+		}
+		@include mq(med){
+			margin: 15px 0;
+		}
+		@media(max-width: 525px){
+			display: none;
+		}
+}
+
+#hero__headline{
+	margin-top: 0;
+	@include mq(lg){
+		margin-bottom: 15px;;
+	}
+		@include mq(med){
+		color: white;
+	}
+	@include mq(sm){
+		font-size: 6.0rem;
+		margin-bottom: 40px;
+	}
+	@media(max-width: 525px){
+		font-size: 5.0rem;
+		margin-bottom: 20px;
+		margin-top: 10px;
+	}
 }
 
 
 .header__hero--background-text{
 	font-family: $Montserrat;
-	font-size:50rem;
+	font-size: 40rem;
 	font-weight: 500;
 	color:rgba(170, 170, 170, 0.3s);
+
+	@include mq(xl){
+		font-size: 30rem;
+	}
+
+	@include mq(med){
+		display:none;
+	}
 }
+
 
 /* ------------  FEATURES  ------------ */
 
-.features__caption h3{
-		font-weight: 700;
-		background: white;
-}
 
 
 /* ------------  MAIN  ------------ */
@@ -73,7 +123,6 @@ p{
 
 .products__header__desc{
 	color: $med-grey;
-
 }
 
 .products--btns{
@@ -91,21 +140,37 @@ p{
 .products__item__info{
 		&--name{
 			color: #555;
-			font-size: 1.6rem;
+			font-size: 1.3rem;
 			line-height: 1.5;
 			font-family: $Roboto;
 			margin: 15px 0 10px;
+
+			@include mq(lg){
+				font-size: 1.3rem;
+			}
+
+			@include mq(med){
+				font-size: 1.2rem;
+				}
 			}
 		&--category{
 			color: $light-grey;
 			font-weight: 300;
+			font-size: 1.3rem;
 			margin: 0 0 15px;
+
+			@include mq(med){
+				font-size: 1.2rem;
+			}
 			}
 
 		&--price{
 			color: $dark-grey;
-			font-size: 1.8rem;
+			font-size: 1.6rem;
 			font-family: $Montserrat;
+			@include mq(med){
+			font-size: 1.2rem;
+			}
 			}
 		&--fullprice{
 			text-decoration: line-through;
@@ -116,6 +181,21 @@ p{
 
 }
 
+// BANNER
+
+@include mq(med){
+
+	.banner h2{
+		margin-top: 0;
+	}
+	.banner h2, .banner p{
+		color: white;
+		text-shadow: 2px 2px 2px $dark-grey;
+	}
+	.banner__button{
+		background: $accent;
+	}
+}
 
 
 // BLOG

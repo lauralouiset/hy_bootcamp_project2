@@ -2,10 +2,6 @@
 MAIN CONTENT SECTION
 ============================================ */
 
-.main-wrapper{
-	width: 60%;
-	margin: 0 auto;
-}
 
 /* =========================================
 PRODUCTS
@@ -18,8 +14,16 @@ PRODUCTS
 .products__sub-header{
 	display: flex;
 	justify-content: space-between;
-	padding-bottom: 30px;
+	@include mq(med){
+		flex-direction: column;
+	}
 }
+
+	@include mq(med){
+		.products__sub-header p{
+			margin: 5px 0;
+		}
+	}
 
 .products__container{
   display: flex;
@@ -28,7 +32,22 @@ PRODUCTS
 }
 
 .products__item{
-  width: 23%;
+	width: 23%;
+	
+	@include mq(sm){
+		width: 46%;
+	}
+}
+
+@include mq(sm){
+	.products--item3,
+	.products--item4{
+		display:none;
+	}
+}
+
+.products__item__info{
+	position:relative;
 }
 
 .products__item--imageContainer{
@@ -43,8 +62,8 @@ PRODUCTS
 .products__item__icon{
 	@include centerXY;
   background: $dark-grey;
-  width: 42px;
-  height: 42px;;
+	width: 20%;
+  padding: 5px;
   position: absolute;
   bottom: -3px;
   right: -3px;
@@ -68,16 +87,13 @@ PRODUCTS
 	color: #eee;
 	font-family: $Montserrat;
 	font-size: 8.6rem;
-
 }
-
 
 .top__products::before{
 	content:"Spring/Summer";
 	transform: rotate(90deg);
-	right: -50%;
-	top: 48%;
-
+	right: -500px;
+	top: 300px;
 }
 
 
@@ -86,35 +102,49 @@ PRODUCTS
 .onsale__products::before{
 	content:"Summer Sale";
 	transform: rotate(90deg);
-	left: -35%;
-	top: 35%;
+	left: -400px;
+	top: 250px;
 }
 
-
+@include mq(xl){
+	.onsale__products::before,
+	.top__products::before{
+		display:none;
+	}
+}
 
 /* =========================================
 BANNER
 ============================================ */
 
 .banner{
-	padding: 100px 0px;
+	padding: 30px 0px;
 	position: relative;
 }
 
 .banner__imageContainer{
   position: relative;
-  width: 68%;
+	width: 68%;
+	@include mq(med){
+		width:100%;
+		margin: 0 auto;
+	}
 }
 
-.banner__imageContainer::after{
-	content:"By Mark Jacobs";
+.banner__photo-credit{
 	text-transform: uppercase;
 	color: #444;
-  position:absolute;
-  transform: rotate(-90deg) translate(80px, 730px);
-  font-size: 1.5rem;
+	position:relative;
+  transform: rotate(-90deg);
+	display: inline-block;
 	font-family: $Montserrat;
-	
+	left: 95%;
+	bottom: 60px;
+
+	@media (max-width: 950px){
+		display:inline;
+		position: static;
+	}
 }
 
 .banner__imageMain{
@@ -122,9 +152,17 @@ BANNER
 }
 
 .banner-border{
+	width: 75%;
+	height: auto;
   position: absolute;
 	top: 20%;
 	left: 35%;
+	@include mq(med){
+		left: 10%;
+	}
+	@media(max-width:700px){
+		display:none;
+	}
 }
 
 .banner__slider-buttons{
@@ -133,6 +171,9 @@ BANNER
 	top: 50%;
 	display: flex;
 	background: $dark-grey;
+	@include mq(med){
+		display: none;
+	}
 }
 
 .banner__slider-button{
@@ -149,13 +190,30 @@ BANNER
 
 .banner__content{
 	position: absolute;
-	right: 30px;
-  top: 200px;
-  text-align: right;
+	right: 0;
+  top: 30%;
+	text-align: right;
+
+	@include mq(med){
+		right: 5%;
+		top:25%;
+	}
+
+@media(max-width:566px){
+	top: 20%;
+	transform:scale(0.8);
+	}
 }
 
+
 .banner__button{
-  border: 1px solid $accent;
+	border: 1px solid $accent;
+	
+	@include mq(med){
+		position: relative;
+		right: 5%;
+
+	}
 }
 
 
@@ -163,17 +221,21 @@ BANNER
 BLOG
 ============================================ */
 
-.blog__container{
-  margin: 0 auto;
+.blog{
+	position: relative;
 }
 
 .blog__posts__post{
   display:flex;
-  justify-content: center;
+	justify-content: center;
+	
+	@include mq(med){
+		flex-direction: column;
+	}
 }
 
 .blog__post--text{
-	padding-top: 100px;
+	padding-top: 70px;
 	width: 40%;
 	position: relative;
 	h6{
@@ -182,27 +244,71 @@ BLOG
 	h4{
 		margin: 10px;
 	}
+
+	@include mq(med){
+		width: 90%;
+		order: 2;
+	}
+	@include mq(sm){
+		width: 100%;
+	}
 }
 
 .blog__posts__post1{
 	position:relative;
 	bottom: -63px;
 	z-index: 2;
+
+	@include mq(med){
+		bottom:0;
+	}
 }
 
 .blog__post--text1{
-padding-left: 50px;
-left: 30px;
+padding: 10px 0 0px 50px;
+	@include mq(med){
+		padding: 10px;
+	}
 }
+
 
 .blog__post--text2{
   text-align: right;
 	padding-right: 50px;
 	right: 30px;
+
+	@include mq(med){
+		right:0;
+		padding: 0;
+	}
 }
 
 .blog__post__image-container{
 	width: 60%;
+	height: 100%;
 	position: relative;
+
+	& img{
+		width: 100%;
+	}
+
+	@include mq(med){
+		width: 100%;
+	}
+
 }
 
+hr{
+	display:none;
+	@include mq(med){
+	display: block;
+	color: $med-grey;
+	margin-bottom: 30px;
+	}
+}
+
+@include mq(med){
+	slider-arrows--blog{
+		display:none;
+	}
+}

@@ -1,0 +1,57 @@
+
+/* =========================================
+CALL TO ACTION
+============================================ */
+
+.cta{
+  display: flex;
+
+  @include mq(med){
+    flex-direction: column;
+  }
+}
+
+.cta__item{
+  width: 50%;
+  padding: 125px 0;
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+
+  @include mq(med){
+    width: 100%;
+  }
+}
+
+.cta__item--dark{
+  background-image: url("../images/footer-1.png");
+  color: white;
+  background-position: center;
+  & h3, & p{
+    color: white;
+    }
+  }
+
+.cta__item--light{
+  background-image: url("../images/footer-2.png");
+    & h3, & p{
+    color: $dark-grey;
+  }
+}
+
+.cta__button{
+  margin-top: 25px;
+}
+  
+
+.cta__button--light{
+  color: $dark-grey;
+  border: 1px solid $dark-grey;
+}
+
+.cta__button--dark{
+  color: white;
+  border: 1px solid white;
+}

@@ -12,11 +12,24 @@ FOOTER
 
 .footer__content{
 	display: flex;
+	flex-flow: row wrap;
 }
 
 .footer__content__item{
-	width: calc(25% - (40px / 3));
-	margin: 10px;
+	width: 23%;
+	margin: 10px 1% 20px;
+
+	@include mq(med){
+		width: calc(50% - 40px);
+		margin: 20px;
+	}
+
+	@include mq(sm){
+		width: 90%;
+		margin: 5%;
+		text-align: center;
+
+	}
 }
 
 // typography
@@ -25,28 +38,31 @@ FOOTER
 	text-transform: uppercase;
 	color: $accent;
 	text-align: left;
-	margin: 50px 15px;
+	margin:40px 0;
+
+	@include mq(med){
+		margin: 10px 0 20px;;
+		text-align: center;
+
+	}
 }
 
 .footer__content p,
 .footer__content,
 .footer__social-media,
-.footer__disclaimer__links{
+.footer__disclaimer{
 	color: white;
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	line-height: 2;
 	font-family: $Montserrat;
 }
 
 
 
-
-
 /* ------------  CONTACT  ------------ */
 
-.footer__content__text{
+.footer__contact__text:first-child{
 	margin-bottom: 30px;
-
 }
 
 /* ------------  TAGS  ------------ */
@@ -70,10 +86,13 @@ FOOTER
 	flex-flow: row wrap;
 	img{
 		width: calc(33.33% - 20px);
+		height: 100%;
 		margin: 10px;
 	}
+	img:nth-child(3n-5){
+		margin-left:0
+	}
 }
-
 
 
 /* ------------  NEWSLETTER  ------------ */
@@ -82,46 +101,94 @@ form input{
 	background: $dark-grey;
 	color: white;
 	border: 1px solid $light-grey;
-	font-size: 16px;
+	font-size: 1.4rem;
+	padding: 5px;
 	font-family: $Montserrat;
 	display: inline-block;
+	@include mq(med){
+		text-align: center;
+		padding: 10px;
+	}
 }
 
 form input[type="email"]{
 	width: 66.66%;
+	&:focus{
+		outline: 1px solid $accent;
+	}
+
+	@include mq(med){
+		margin-bottom: 20px;
+		width: 100%
+	}
+}
+
+@include mq(med){
+	input[type="submit"]{
+		width: 100%;
+	}
+	label{
+		text-align: center;
+	}
 }
 
 
 /* ------------  SOCIALS  ------------ */
 
 .footer__social-media{
-	display: flex;
+	@include centerXY;
   flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
 }
 
 .footer__social-media--links{
-		display: flex;
+		@include centerXY;
 		a{
-		padding: 20px;
-		margin: 10px;
+		text-align: center;
+		padding: 10px;
+		min-width: 100px;
+		margin: 0 20px;
+		display: inline-block;
+		border-radius: 30px;
+		border: 1px solid transparent;
 		}
 		a:hover{
 			border-radius: 30px;
 			border: 1px solid $accent;
 			color: $accent;
+			}
+		
+		@include mq(med){
+			flex-flow: row wrap;
+			margin:20px 0;
 		}
   }
+
 
 /* ------------  DISCLAIMER  ------------ */
 
 .footer__disclaimer{
   padding: 30px;
   display: flex;
-  justify-content:space-around;
+	justify-content:space-around;
+	align-items: center;
     &__links{
-    margin-left: 50px;
-    display:flex;
-  }
+		display:flex;
+		text-align:center;
+		& a{
+			margin: 0 20px;
+		}
+	}
+
+	@include mq(med){
+		flex-direction: column-reverse;
+	}
+}
+
+@include mq(sm){
+	.footer__disclaimer__links{
+		font-size: 1.2rem;
+		& a{
+			margin: 0 10px;
+		}
+	}
 }

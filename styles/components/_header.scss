@@ -4,8 +4,6 @@ HEADER
 
 /* ------------  NAV STYLES ------------ */
 
-
-
 .header-nav{
   display:flex;
   align-items: center;
@@ -20,12 +18,36 @@ HEADER
   .fa-chevron-down{
     font-size: 1.2rem;
   }
+}
+@include mq(sm){
+.header-nav{
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header__options--languages{
+  display: none;
+}
 
 }
 
-.targeted{
-  border-bottom: 1px solid $accent;
+@media max-width(){
+  .header-nav__nav{
+    flex-direction: column;
+  }
 }
+
+
+
+.active-page{
+  border-bottom: 2px solid $accent;
+}
+
+.header-logo{
+  @include mq(xl){
+  height: 35px;
+  }
+} 
 
 
 .header__options{
@@ -38,7 +60,11 @@ HEADER
       margin-top: 4px;
     }
   }
-  
+  @include mq(lg){
+    flex-direction: column;
+  }
+
+
 }
 
 
@@ -63,6 +89,15 @@ HEADER
 .hero{
   padding-left: 13%;
   position: relative;
+  @include mq(med){
+    padding: 0;
+  }
+}
+
+.hero-date{
+  @include mq(med){
+    display:none;
+  }
 }
 
 .hero-date::after{
@@ -74,12 +109,17 @@ HEADER
   width: 63%;
   position: relative;
   margin-left: auto;
+  @include mq(med){
+    width: 100%;
+    margin: 0 auto;
+  }
+
 }
 
 .header__hero--background{
   position: absolute;
   bottom: 0px;
-  left: 13%;
+  left: 10%;
 
 }
 
@@ -87,13 +127,8 @@ HEADER
   position: absolute;
   z-index: 9;
   left: 16%;
-  h1{
-    margin-top: 0;
-  }
-  h3{
-    font-family: $Roboto;
-    color: $light-grey;
-    font-weight: 300;
+  @include mq(med){
+    left: 5%;
   }
 }
 
@@ -103,12 +138,19 @@ bottom: 0;
 right: 0;
 background: white;
 display:flex;
+
+@include mq(med){
+  display:none;
+}
 }
 
 .light--arrow{
   font-size: 1.6rem;
   @include centerXY;
   padding: 30px 40px;
+  @include mq(xl){
+    padding: 10px 15px;
+  }
 }
 
 .light--arrow--right{
@@ -123,4 +165,10 @@ display:flex;
   position: absolute;
   bottom:0;
   left: 10%;
+  @include mq(xl){
+    left: 2%;
+  }
+  @include mq(med){
+    bottom: -40px;
+  }
 }

@@ -14,9 +14,9 @@
   <!-- HEADER & NAV -->
 	<header>
 		<nav class="header-nav inner-wrapper">
-      <a href="index.html"><img src="images/logo.png" alt="MaxShop logo"></a>
+      <a href="index.html"><img  class="header-logo" src="images/logo.png" alt="MaxShop logo"></a>
       <ul class="header-nav__nav">
-        <li><a class="targeted" href="#index.html">Home</a></li>
+        <li><a class="active-page" href="#index.html">Home</a></li>
         <li><a href="#">Shop <i class="fas fa-chevron-down"></i></a></li>
         <li><a href="#">Lookbook</a></li>
         <li><a href="#">Contact</a></li>
@@ -52,8 +52,8 @@
       </div>
 
       <div class="header__hero__heading">
-        <h3>Bring glamour to your wardrobe</h3>
-        <h1>Summer <br/> Collection 2016”</h1>
+        <h3 id="hero__sub-text">Bring glamour to your wardrobe</h3>
+        <h1 id="hero__headline">Summer <br/> Collection 2016”</h1>
         <a href="#" class="button button--header">View more</a>
       </div>
 
@@ -223,6 +223,7 @@
 		<div class="banner__imageContainer">
 			<img class="banner__imageMain" src="images/main-image-2.png" alt="T-shirts hanging on rack">
 			<img class="banner-border" src="images/banner-border.png" alt="banner border">
+			
 
 			<!-- slider buttons -->
 			<div class="banner__slider-buttons slider-buttons">
@@ -233,6 +234,7 @@
 					<i class="fas fa-chevron-right"></i>
 				</div>
 			</div>
+			<span class="banner__photo-credit">By Mark Jacobs</span>
 		</div>
 
 		<div class="banner__content">
@@ -360,7 +362,6 @@
 	<!-- OUR BLOG -->
   <section class="main_section blog">
 		<h2 class="main__header">Our Blog</h2>
-		<div class="blog__container">
 
 			<div class="blog__posts__post blog__posts__post1">
 
@@ -375,18 +376,20 @@
 					</div>
 			</div>
 
+			<hr>
+
 			<div class="blog__posts__post blog__posts__post2">
 				<div class="blog__post__image-container">
 					<img src="images/blog-2.png" alt="Woman in alley with hat">
-					<div class="slider-arrows--light">
+					<div class="slider-arrows--light slider-arrows--blog">
 						<div class=" light--arrow light--arrow--left">
 							<i class="fas fa-chevron-left"></i>
 						</div>
 						<div class=" light--arrow light--arrow--right">
 							<i class="fas fa-chevron-right"></i>
 						</div>
-
 					</div>
+
 				</div>
 
 				<div class="blog__post--text blog__post--text2">
@@ -397,7 +400,7 @@
 				</div>
 			</div>
 
-		</div>
+
   </section>
 
 </main>
@@ -426,12 +429,12 @@
 	<footer>
 		<div class="footer__main">
 
-			<div class="footer__content main-wrapper">
+			<div class="footer__content inner-wrapper">
 
 				<div class="footer__content__item footer__content__contact">
 					<h5 class="footer__header">Contact</h5>
-					<p class="footer__content__text">621 Bingamon Branch Road Warwich<br/>NY 10990</p>
-					<p class="footer__content__text">Phone: 845-988-7165<br/>Fax:814-468-0188<br/>Email: Support@maxshop.com</p>
+					<p class="footer__contact__text">621 Bingamon Branch Road Warwich<br/>NY 10990</p>
+					<p class="footer__contact__text">Phone: 845-988-7165<br/>Fax: 814-468-0188<br/>Email: Support@maxshop.com</p>
 				</div>
 
 				<div class="footer__content__item footer__content__tags">
@@ -489,7 +492,7 @@
 
 			<div class="footer__lower">
 
-				<div class="footer__disclaimer main-wrapper">
+				<div class="footer__disclaimer inner-wrapper">
 					<p>&copy; Maxshop 2016. All Rights Reserved</p>
 					<ul class="footer__disclaimer__links">
 						<li><a href="#">Terms of Use</a></li>

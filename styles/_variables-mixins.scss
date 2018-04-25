@@ -1,4 +1,6 @@
-/* ------------  VARIABLES & MIXINS  ------------ */
+/* =========================================
+VARIABLES & MIXINS
+============================================ */
 
 
 /* ------------  COLORS  ------------ */
@@ -18,26 +20,38 @@ $light-grey: #aaa;
   align-items: center;
 }
 
-
-/* =========================================
-RESPONSIVE BREAKPOINTS
-============================================ */
+/* ------------  RESPONSIVE MIXINS  ------------ */
 
 
+// Breakpoints 
 
-  @mixin breakpoint($point) {
+$sm: 600px;
+$med: 800px;
+$lg: 960px;
+$xl: 1200px;
 
-    @if $point == laptop {
-      @media (min-width: 1200px) { @content ; }
-  }
-    @else if $point == tablet {
-      @media (min-width: 900px) { @content ; }
-  }
-    @else if $point == phone {
-      @media (min-width: 650px)  { @content ; }
-  }
-  @else if $point == lilmobile {
-      @media (max-width: 500px)  { @content ; }
 
-  }
+// Media Queries
+
+@mixin mq($break){
+    @if $break == 'sm'{
+		@media(max-width: $sm){
+		@content;
+			}
+  } 
+    @else if $break == 'med'{
+		@media(max-width: $med){
+		@content;
+	}
+    } 
+    @else if $break == 'lg'{
+		@media(max-width: $lg){
+		@content;
+			}
+    }
+    @else if $break == 'xl'{
+		@media(max-width: $xl){
+		@content;
+			}
+		}
 }

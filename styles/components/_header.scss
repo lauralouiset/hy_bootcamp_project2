@@ -17,6 +17,10 @@ HEADER
   }
   .fa-chevron-down{
     font-size: 1.2rem;
+    @media (max-width:850px{
+      display: none;
+    }
+    }
   }
 }
 

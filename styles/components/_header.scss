@@ -6,33 +6,35 @@ HEADER
 
 .header-nav{
   display:flex;
+  flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
   padding: 15px;
   &__nav{
     display:flex;
     li a{
-      // padding: 10 10px;
+      padding: 10 10px;
+      margin: 0 10px;
     }
   }
   .fa-chevron-down{
     font-size: 1.2rem;
-    @media (max-width:850px){
+    @media (max-width:830px){
       display: none;
     }
-    @include mq(med){
-      font-size: 0.8rem;
-    }
+
   }
 }
 
-
 @include mq(sm){
-.header-nav{
+.header-nav,
+.header-nav__nav{
   flex-direction: column;
   justify-content: space-between;
   padding: 5px;
   }
+  
+
 .header__options--languages{
   display: none;
   }
@@ -78,8 +80,14 @@ HEADER
 .header__options--icons{
   display:flex;
   align-items: flex;
+  & img{
+    min-width: 15px;
+    height: auto;
+    @media(min-width: 1200px){
+      margin: 0 10px;
+  }
 }
-
+}
 
 
 /* ------------  HERO  ------------ */

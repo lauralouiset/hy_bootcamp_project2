@@ -51,11 +51,14 @@ p{
 	@include mq(xl){
 		font-size: 1.6rem;
 		padding-bottom: 10px;
-		margin: 0 10px;
+		margin: 0 15px;
 	}
 	@include mq(lg){
 		font-size: 1.4rem;
-		margin: px 15px;
+		margin: 0px 10px;
+	}
+	@include mq(med){
+		margin: 0 3px;
 	}
 }
 
@@ -76,7 +79,7 @@ p{
 
 #hero__headline{
 	margin-top: 0;
-	border: 1px solid pink;
+
 	@include mq(lg){
 		margin: 15px 0;
 	}
@@ -86,7 +89,7 @@ p{
 	}
 	@include mq(sm){
 		font-size: 6.0rem;
-		margin-bottom: 40px;
+	
 	}
 	@media(max-width: 525px){
 		font-size: 5.0rem;
@@ -94,7 +97,6 @@ p{
 		margin-top: 10px;
 	}
 }
-
 
 .header__hero--background-text{
 	font-family: $Montserrat;
@@ -106,7 +108,6 @@ p{
 		display:none;
 	}
 }
-
 
 /* ------------  FEATURES  ------------ */
 

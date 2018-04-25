@@ -236,7 +236,7 @@ BLOG
 
 .blog__post--text{
 	padding-top: 70px;
-	width: 40%;
+	width: 50%;
 	position: relative;
 	h6{
 		margin: 10px;
@@ -244,6 +244,8 @@ BLOG
 	h4{
 		margin: 10px;
 	}
+
+	@media (min-width: 100px){}
 
 	@include mq(med){
 		width: 90%;

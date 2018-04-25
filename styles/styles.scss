@@ -47,6 +47,8 @@ a:visited{
 ul{
   list-style-type: none;
   -webkit-padding-start: 0;
+  -moz-padding-start: 0;
+
 }
 
 /* ------------  WRAPPERS  ------------ */
@@ -63,7 +65,7 @@ ul{
 }
 
 .inner-wrapper{
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
 }
 

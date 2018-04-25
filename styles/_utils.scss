@@ -43,3 +43,33 @@ UTILITIES
 
 /* ------------  SLIDER BUTTONS  ------------ */
 
+//LIGHT SLIDER BUTTONS IN HERO AND BLOG POST
+
+.slider-arrows--light{
+position: absolute;
+bottom: 0;
+right: 0;
+background: white;
+display:flex;
+
+@include mq(med){
+  display:none;
+}
+}
+
+.light--arrow{
+  font-size: 1.6rem;
+  @include centerXY;
+  padding: 30px 40px;
+  @include mq(xl){
+    padding: 10px 15px;
+  }
+}
+
+.light--arrow--right{
+  color: $med-grey;
+}
+
+.light--arrow--left{
+  color: $accent;
+}

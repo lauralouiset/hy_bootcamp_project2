@@ -61,7 +61,6 @@ p{
 	}
 }
 
-
 #hero__sub-text{
     font-family: $Roboto;
     color: $light-grey;
@@ -79,11 +78,13 @@ p{
 
 #hero__headline{
 	margin-top: 0;
+	border: 1px solid pink;
 	@include mq(lg){
-		margin-bottom: 15px;;
+		margin: 15px 0;
 	}
 		@include mq(med){
 		color: white;
+		font-size: 7.0rem;
 	}
 	@include mq(sm){
 		font-size: 6.0rem;

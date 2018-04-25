@@ -202,13 +202,15 @@ p {
       display: none; } }
 
 #hero__headline {
-  margin-top: 0; }
+  margin-top: 0;
+  border: 1px solid pink; }
   @media (max-width: 960px) {
     #hero__headline {
-      margin-bottom: 15px; } }
+      margin: 15px 0; } }
   @media (max-width: 800px) {
     #hero__headline {
-      color: white; } }
+      color: white;
+      font-size: 7.0rem; } }
   @media (max-width: 600px) {
     #hero__headline {
       font-size: 6.0rem;
@@ -335,6 +337,40 @@ UTILITIES
   border: 1px solid #d4bd52; }
 
 /* ------------  SLIDER BUTTONS  ------------ */
+.slider-arrows--light {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (max-width: 800px) {
+    .slider-arrows--light {
+      display: none; } }
+
+.light--arrow {
+  font-size: 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 30px 40px; }
+  @media (max-width: 1200px) {
+    .light--arrow {
+      padding: 10px 15px; } }
+
+.light--arrow--right {
+  color: #888; }
+
+.light--arrow--left {
+  color: #d4bd52; }
+
 /* =========================================
 BASE STYLES
 ============================================ */
@@ -422,7 +458,7 @@ HEADER
   .header__options--languages {
     display: none; } }
 
-.header-logo {
+.header__nav--logo {
   width: 20vw;
   max-width: 200px;
   height: auto; }
@@ -511,40 +547,6 @@ HEADER
   @media (max-width: 800px) {
     .header__hero__heading {
       left: 5%; } }
-
-.slider-arrows--light {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  @media (max-width: 800px) {
-    .slider-arrows--light {
-      display: none; } }
-
-.light--arrow {
-  font-size: 1.6rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 30px 40px; }
-  @media (max-width: 1200px) {
-    .light--arrow {
-      padding: 10px 15px; } }
-
-.light--arrow--right {
-  color: #888; }
-
-.light--arrow--left {
-  color: #d4bd52; }
 
 .header__hero--hamburger {
   position: absolute;

@@ -32,7 +32,7 @@ HEADER
   }
 }
 
-.header-logo{
+.header__nav--logo{
   width: 20vw;
   max-width: 200px;
   height: auto;
@@ -101,7 +101,6 @@ HEADER
     width: 100%;
     margin: 0 auto;
   }
-
 }
 
 .header__hero--background{
@@ -117,35 +116,6 @@ HEADER
   @include mq(med){
     left: 5%;
   }
-}
-
-.slider-arrows--light{
-position: absolute;
-bottom: 0;
-right: 0;
-background: white;
-display:flex;
-
-@include mq(med){
-  display:none;
-}
-}
-
-.light--arrow{
-  font-size: 1.6rem;
-  @include centerXY;
-  padding: 30px 40px;
-  @include mq(xl){
-    padding: 10px 15px;
-  }
-}
-
-.light--arrow--right{
-  color: $med-grey;
-}
-
-.light--arrow--left{
-  color: $accent;
 }
 
 .header__hero--hamburger{
